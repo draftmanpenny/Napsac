@@ -22,7 +22,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Accounts
-        fields = ('id','username','password', 'password2', 'first_name', 'last_name', 'university' )
+        fields = ('username','password', 'password2', 'first_name', 'last_name', 'university' )
         extra_kwargs = {
             'password':{'write_only': True},
         }

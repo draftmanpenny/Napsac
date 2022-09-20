@@ -5,9 +5,9 @@ from django.db import models
 
 class Accounts(models.Model): 
     id = models.IntegerField(primary_key=True)
-    university = models.CharField(max_length=250, blank=False)
+    university = models.TextField(max_length=250, blank=False)
     first_name = models.TextField(blank=False)
     last_name = models.TextField(blank=False)
-    username = models.CharField(max_length=20,blank=False)
+    username = models.CharField(max_length=20,blank=False, unique=True)
     password = models.CharField(max_length=16, blank=False)
     password2 = models.CharField(max_length=16, blank=False)
