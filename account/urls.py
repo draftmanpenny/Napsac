@@ -7,5 +7,5 @@ from .api import RegisterApi
 
 urlpatterns = [
     path('login/', MyObtainTokenPairView.as_view(), name='token_obtain_pair'),
-    path('api/register', RegisterApi.as_view()), 
+    path('register/', RegisterApi.as_view()), 
 ]
