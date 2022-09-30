@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import UserManager
 
 # Create your models here.
 
@@ -6,9 +7,11 @@ from django.db import models
 
 class Account(models.Model):
     id = models.IntegerField(primary_key=True)
-    first_name = models.CharField(max_length=30, blank=False)
-    last_name = models.CharField(max_length=30, blank=False)
-    username = models.CharField(max_length=30, blank=False, unique=True)
-    password = models.CharField(max_length=16, blank=False, write_only=True)
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    username = models.CharField(max_length=30)
+    password = models.CharField(max_length=16)
     university = models.TextField(blank=False)
+
+    objects = UserManager()
 
