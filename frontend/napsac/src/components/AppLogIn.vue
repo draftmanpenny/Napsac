@@ -6,7 +6,7 @@
         <input type="text" id="password">
         <p> Don't have an account? <a href="#"> Sign up</a></p>
 
-        <button @click="validation()"> Log in </button>
+        <button> Log in </button>
     </div>
 </template>
 

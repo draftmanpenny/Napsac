@@ -3,6 +3,10 @@
     <Login></Login>
     <AppButton></AppButton>
   </div>
+  <template v-else-if="nav">
+    <NavBar></NavBar>
+    <RecentBooks></RecentBooks>
+  </template>
   <template v-else>
     <div class="signup_container">
       <SignUp></SignUp>
@@ -18,6 +22,8 @@
 import AppButton from './components/AppButton.vue';
 import Login from './components/LogIn.vue';
 import SignUp from './components/SignUp.vue';
+import NavBar from './components/NavBar.vue'
+import RecentBooks from './components/RecentBooks.vue';
 
 
 export default {
@@ -25,7 +31,7 @@ export default {
   data() {
     return {
       LoginView: true,
-      displayed: false
+      nav: true
 
 
 
@@ -34,8 +40,9 @@ export default {
   components: {
     AppButton,
     Login,
-    SignUp
-
+    SignUp,
+    NavBar,
+    RecentBooks
   },
   method: {
 
@@ -65,5 +72,12 @@ export default {
   width: 100%;
   height: auto;
   flex-direction: column;
+  position: absolute;
+  top: 250px;
+}
+
+body {
+
+  margin: 0;
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
-
-    <button> Log in </button>
+    <button type="submit"> Log in </button>
 </template>
 
 <style>
@@ -16,5 +15,6 @@ button {
     border-width: 1px;
     color: white;
     font-size: 20px;
+
 }
 </style>
