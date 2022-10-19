@@ -9,3 +9,11 @@ class Books(models.Model):
     title = models.TextField(blank=False)
     author = models.CharField(max_length=100)
     content = models.CharField(max_length=100)
+
+
+class Library(models.Model):
+    user_id = models.ForeignKey(primary_key=True)
+    books_id = models.ForeignKey()
+
+
+

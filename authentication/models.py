@@ -31,5 +31,24 @@ class University(models.Model):
 
 
 
+class UCLA(models.Model):
+    pass 
+
+
+class HIU(models.Model):
+    pass 
+
+
+class USC(models.Model):
+    pass 
+
+class CSUF(models.Model):
+    pass 
+
+
+
+
+
+
 
 
