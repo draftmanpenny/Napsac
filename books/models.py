@@ -14,6 +14,8 @@ class Books(models.Model):
 class Library(models.Model):
     user_id = models.ForeignKey(primary_key=True)
     books_id = models.ForeignKey()
+    pass 
+
 
 
 
