@@ -7,6 +7,7 @@
     <div class="signup_container">
       <SignUp></SignUp>
       <AppButton></AppButton>
+
     </div>
 
   </template>
@@ -17,13 +18,15 @@
 import AppButton from './components/AppButton.vue';
 import Login from './components/LogIn.vue';
 import SignUp from './components/SignUp.vue';
-import axios from 'axios'
+
 
 export default {
   name: 'App',
   data() {
     return {
-      LoginView: true
+      LoginView: true,
+      displayed: false
+
 
 
     }
@@ -35,6 +38,7 @@ export default {
 
   },
   method: {
+
 
   }
 }

@@ -7,11 +7,14 @@ from django.contrib.auth.models import UserManager
 
 class Account(models.Model):
     id = models.IntegerField(primary_key=True)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
     username = models.CharField(max_length=30)
     password = models.CharField(max_length=16)
     university = models.TextField(blank=False)
 
     objects = UserManager()
+
+
+
 
