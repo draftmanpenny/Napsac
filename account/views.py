@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
 
-from authentication import serializers
+from account import serializers
 from .models import Account
 from rest_framework import permissions
 from .serializers import RegistrationSerializer
