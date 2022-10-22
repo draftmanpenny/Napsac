@@ -5,47 +5,31 @@ from django.forms import IntegerField
 # Create your models here.
 
 
-
-class Account(models.Model):
-    id = models.IntegerField(primary_key=True)
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    username = models.CharField(max_length=30)
-    password = models.CharField(max_length=16)
-    university_id = models.ForeignKey('University',
-                     on_delete=models.PROTECT, blank=False)
-
-    objects = UserManager()
-
-
-
 class University(models.Model):
-    UCLA = 'University of Californa'
-    USC = 'University of Southern California'
-    HIU = 'Hope International University'
-    CSUF = 'Cal State Fullerton'
+    name = models.CharField(max_length=100, blank=False)
 
-
+class Book(models.Model):
     id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    author = models.CharField(max_length=100)
 
 
 
-class UCLA(models.Model):
-    pass 
+class Users(models.Model):
+    id = models.IntegerField(primary_key=True)
+    first_name = models.CharField(max_length=100, blank=False)
+    last_name = models.CharField(max_length=100, blank=False)
+    email = models.EmailField(max_length=250, blank=False)
+    password = models.CharField(max_length=16, blank=False)
+    university = models.ForeignKey(University, on_delete=models.PROTECT)
+    
+
+    object = UserManager()
 
 
-class HIU(models.Model):
-    pass 
-
-
-class USC(models.Model):
-    pass 
-
-class CSUF(models.Model):
-    pass 
-
-
+class UserBookShelf(models.Model):
+    user = models.OneToOneField(Users, on_delete=models.PROTECT, primary_key=True)
+    book = models.ForeignKey(Book, on_delete=models.PROTECT)
 
 
 
