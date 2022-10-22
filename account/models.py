@@ -31,8 +31,3 @@ class UserBookShelf(models.Model):
     user = models.OneToOneField(Users, on_delete=models.PROTECT, primary_key=True)
     book = models.ForeignKey(Book, on_delete=models.PROTECT)
 
-
-
-
-
-

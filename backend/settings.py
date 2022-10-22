@@ -39,8 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+<<<<<<< HEAD
     'authentication',
     'corsheaders'
+=======
+    'account', 
+    'corsheaders',
+>>>>>>> c301cbdcf7aed4073258c9f1331d0e79b03e76c0
 
   
 ]

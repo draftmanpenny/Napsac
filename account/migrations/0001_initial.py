@@ -15,6 +15,8 @@ class Migration(migrations.Migration):
     operations = [
         migrations.CreateModel(
             name='Book',
+
+
             fields=[
                 ('id', models.IntegerField(primary_key=True, serialize=False)),
                 ('title', models.CharField(max_length=100)),
