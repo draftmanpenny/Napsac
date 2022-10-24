@@ -11,6 +11,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import serializers
 from rest_framework import generics
+from rest_framework.views import APIView
 # Create your views here.
 
 
@@ -28,4 +29,5 @@ class RegistrationApiView(generics.CreateAPIView):
         return Response({"Errors": serializers.errors}, status=status.HTTP_400_BAD_REQUEST) 
 
 
-
+class UserBookShelfAPI(APIView):
+    pass 

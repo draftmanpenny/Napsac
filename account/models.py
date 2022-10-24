@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 from django.contrib.auth.models import UserManager
 from django.forms import IntegerField
@@ -6,7 +7,13 @@ from django.forms import IntegerField
 
 
 class University(models.Model):
-    name = models.CharField(max_length=100, blank=False)
+    SCHOOL_CHOICES=[
+        ('UCLA', 'University of California'),
+        ('USC', 'University of Southern Californa'),
+        ('CSUF', 'Cal State Fullerton '), 
+        ('HIU', 'Hope International University')
+    ]
+    name = models.CharField(max_length=100, blank=False, choices=SCHOOL_CHOICES, default='HIU')
 
 class Book(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -29,5 +36,5 @@ class Users(models.Model):
 
 class UserBookShelf(models.Model):
     user = models.OneToOneField(Users, on_delete=models.PROTECT, primary_key=True)
-    book = models.ForeignKey(Book, on_delete=models.PROTECT)
+    book = models.ManyToManyField(Book)
 

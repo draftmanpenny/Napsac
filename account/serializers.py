@@ -1,5 +1,5 @@
 from rest_framework import serializers
-
+from .models import * 
 from account.models import Users
 
 
@@ -7,6 +7,8 @@ from account.models import Users
 class RegistrationSerializer(serializers.ModelSerializer):
     email = serializers.CharField(max_length=250)
     password = serializers.CharField(max_length=16)
+    email = serializers.EmailField(max_length=250)
+    
     
     class Meta: 
         model = Users
