@@ -1,5 +1,8 @@
 <template>
   <div v-if="LoginView" class="login_container">
+    <div class="logo">
+      <img src="./assets/napsac.svg" alt="Napsac">
+    </div>
     <Login></Login>
     <AppButton></AppButton>
   </div>
@@ -26,6 +29,8 @@ import NavBar from './components/NavBar.vue'
 import RecentBooks from './components/RecentBooks.vue';
 
 
+
+
 export default {
   name: 'App',
   data() {
@@ -42,7 +47,7 @@ export default {
     Login,
     SignUp,
     NavBar,
-    RecentBooks
+    RecentBooks,
   },
   method: {
 
@@ -79,5 +84,11 @@ export default {
 body {
 
   margin: 0;
+}
+
+.logo {
+  position: relative;
+  left: -500px;
+  top: -200px;
 }
 </style>
