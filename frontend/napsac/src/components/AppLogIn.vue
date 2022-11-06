@@ -1,11 +1,10 @@
-<template>˜
+<template>
     <div class="login">
         <label for="username"> Username </label>
         <input type="text" id="username">
         <label for="password"> Password</label>
         <input type="text" id="password">
         <p> Don't have an account? <a href="#"> Sign up</a></p>
-
         <button> Log in </button>
     </div>
 </template>
@@ -18,7 +17,7 @@
     height: 500px;
     flex-direction: column;
     justify-content: center;
-    top: 100px;
+
 
 }
 
@@ -70,5 +69,8 @@ p {
 }
 </style>
 <script>
+export default {
+    name: 'AppLogin'
+}
 
 </script>

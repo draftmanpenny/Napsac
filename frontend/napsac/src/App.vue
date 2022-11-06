@@ -3,8 +3,7 @@
     <div class="logo">
       <img src="./assets/napsac.svg" alt="Napsac">
     </div>
-    <Login></Login>
-    <AppButton></AppButton>
+    <AppLogin></AppLogin>
   </div>
   <template v-else-if="nav">
     <NavBar></NavBar>
@@ -13,8 +12,6 @@
   <template v-else>
     <div class="signup_container">
       <SignUp></SignUp>
-      <AppButton></AppButton>
-
     </div>
 
   </template>
@@ -22,11 +19,13 @@
 
 <script>
 
-import AppButton from './components/AppButton.vue';
-import Login from './components/LogIn.vue';
+import AppLogin from './components/AppLogIn.vue';
 import SignUp from './components/SignUp.vue';
 import NavBar from './components/NavBar.vue'
 import RecentBooks from './components/RecentBooks.vue';
+
+
+
 
 
 
@@ -43,13 +42,13 @@ export default {
     }
   },
   components: {
-    AppButton,
-    Login,
+    AppLogin,
     SignUp,
     NavBar,
     RecentBooks,
   },
   method: {
+
 
 
 
@@ -88,7 +87,7 @@ body {
 
 .logo {
   position: relative;
-  left: -500px;
-  top: -200px;
+  left: -875px;
+  top: -225px;
 }
 </style>
